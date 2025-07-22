@@ -12,8 +12,11 @@ Project Structure
 
 hudabot/
 │
+
 ├── app.py (Main Python script)
+
 ├── requirements.txt (Required Python packages)
+
 └── README.md (Project documentation)
 
 AI Integration
