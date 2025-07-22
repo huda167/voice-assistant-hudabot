@@ -4,7 +4,7 @@ from gtts import gTTS
 import os
 
 # 1. إعداد Cohere
-co = cohere.Client('qwHiYwd1G2ATaopft9b4GBSDepWGexUmYm9B6Mz2')  # ← اكتبي مفتاح Cohere هنا
+co = cohere.Client('qwHiYwd1G2ATaopft9b4GBSDepWGexUmYm9B6Mz2')  
 
 # 2. تحويل الصوت إلى نص
 def voice_to_text():
@@ -14,7 +14,7 @@ def voice_to_text():
         audio = r.listen(source)
         print("✅ تم تسجيل الصوت، جاري التحويل...")
         try:
-            text = r.recognize_google(audio, language="ar-SA")  # اللغة: عربية سعودية
+            text = r.recognize_google(audio, language="ar-SA")  
             print("📝 النص:", text)
             return text
         except Exception as e:
@@ -32,7 +32,7 @@ def get_response_from_cohere(text_input):
 def text_to_voice(text):
     tts = gTTS(text=text, lang='ar')
     tts.save("reply.mp3")
-    os.system("start reply.mp3")  # لو ما اشتغل الصوت قولي لي نشوف الطريقة حسب جهازك
+    os.system("start reply.mp3")  
 
 # 5. دمج الخطوات كلها
 def main():
